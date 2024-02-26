@@ -2,6 +2,7 @@
 $primary-color: #89a4c7;
 $card-bg: rgb(49, 49, 58);
 $page-bg: rgb(25, 25, 29);
+$chart-bg: rgb(60, 60, 66);
 $font-family: Poppins;
 $font-color: white;
 
@@ -10,6 +11,7 @@ $font-color: white;
   primary_color: $primary-color;
   card_bg: $card-bg;
   page_bg: $page-bg;
+  chart_bg: $chart-bg;
   font_family: $font-family;
   font_color: $font-color;
 }

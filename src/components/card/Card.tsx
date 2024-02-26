@@ -4,13 +4,13 @@ import Analysis from "../../pages/analysis/Analysis";
 import Persuasion from "../../pages/persuasion/Persuasion";
 import styles from "./Card.module.scss";
 
-type tab = {
+type Tab = {
   name: string;
   icon: ReactElement;
   component: ReactElement;
 };
 
-const tabs: tab[] = [
+const tabs: Tab[] = [
   {
     name: "Analysis",
     icon: <BsBarChartFill className={styles["tab-icon"]} size={15} />,
@@ -25,7 +25,7 @@ const tabs: tab[] = [
 
 const Card = () => {
   // Store selected tab
-  const [selectedTab, setSelectedTab] = useState<tab>(tabs[0]);
+  const [selectedTab, setSelectedTab] = useState<Tab>(tabs[0]);
 
   return (
     <div className={styles["container"]}>
