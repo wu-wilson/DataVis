@@ -1,0 +1,12 @@
+@use "../../_themes.module.scss" as themes;
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  transition: ease-in 200ms;
+  background-color: themes.$page-bg;
+}

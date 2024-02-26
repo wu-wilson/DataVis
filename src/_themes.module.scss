@@ -1,0 +1,11 @@
+// Vars
+$primary-color: #89a4c7;
+$card-bg: rgb(49, 49, 58);
+$page-bg: rgb(25, 25, 29);
+
+// Var exports
+:export {
+  primary_color: $primary-color;
+  card_bg: $card-bg;
+  page_bg: $page-bg;
+}
