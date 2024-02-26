@@ -1,0 +1,8 @@
+@use "./themes.module.scss" as themes;
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  font-family: themes.$font-family;
+  color: themes.$font-color;
+}

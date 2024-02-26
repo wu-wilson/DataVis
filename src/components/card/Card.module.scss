@@ -1,0 +1,67 @@
+@use "../../_themes.module.scss" as themes;
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 85%;
+  max-width: 1300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: darken(themes.$card-bg, 5);
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  &:first-child {
+    border-top-left-radius: 20px;
+  }
+  &:last-child {
+    border-top-right-radius: 20px;
+  }
+  .tab {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: ease-in background-color 200ms, ease-in color 200ms;
+    &:first-child {
+      border-top-left-radius: 20px;
+    }
+    &:last-child {
+      border-top-right-radius: 20px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: darken(themes.$card-bg, 10);
+    }
+  }
+  .selectedTab {
+    background-color: themes.$card-bg;
+    color: themes.$primary-color;
+  }
+}
+
+.tab-icon {
+  margin-right: 10px;
+}
+
+.content {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: themes.$card-bg;
+}
