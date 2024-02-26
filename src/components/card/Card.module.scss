@@ -44,7 +44,7 @@
     }
     &:hover {
       cursor: pointer;
-      background-color: darken(themes.$card-bg, 10);
+      background-color: lighten(themes.$card-bg, 10);
     }
   }
   .selectedTab {
