@@ -1,5 +1,5 @@
 import { ReactElement, useState } from "react";
-import { BsGraphUpArrow, BsBookHalf } from "react-icons/bs";
+import { BsBarChartFill, BsBookHalf } from "react-icons/bs";
 import Analysis from "../../pages/analysis/Analysis";
 import Persuasion from "../../pages/persuasion/Persuasion";
 import styles from "./Card.module.scss";
@@ -13,7 +13,7 @@ type tab = {
 const tabs: tab[] = [
   {
     name: "Analysis",
-    icon: <BsGraphUpArrow className={styles["tab-icon"]} size={15} />,
+    icon: <BsBarChartFill className={styles["tab-icon"]} size={15} />,
     component: <Analysis />,
   },
   {
