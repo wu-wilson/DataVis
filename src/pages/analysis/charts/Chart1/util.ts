@@ -103,5 +103,16 @@ export const chart1Options: Highcharts.Options = {
     text: `<span class=${styles["subtitle"]}><span>Drag over an area to zoom</span><span>Hold shift and drag to pan</span></span>`,
     useHTML: true,
   },
+  tooltip: {
+    useHTML: true,
+    formatter: function () {
+      return `<div class=${styles["tooltip"]}><span class=${
+        styles["title"]
+      }>${new Date(this.point.x).toLocaleDateString("en-us", {
+        month: "long",
+        year: "numeric",
+      })}</span><span>${this.point.y?.toLocaleString()} Births</span></div>`;
+    },
+  },
   series: [],
 };
