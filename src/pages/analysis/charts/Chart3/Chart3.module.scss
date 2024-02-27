@@ -23,3 +23,14 @@
     background-color: darken(themes.$primary-color, 10);
   }
 }
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-weight: bold;
+    color: themes.$primary-color;
+    width: 100%;
+    text-decoration: underline;
+  }
+}

@@ -1,6 +1,23 @@
 import { ParsedRawData } from "../../Analysis";
 import { SeriesHeatmapOptions } from "highcharts";
+import { MapObj } from "../Chart2/util";
 import themes from "../../../../_themes.module.scss";
+import styles from "./Chart3.module.scss";
+
+const MonthMap: MapObj = {
+  0: "January",
+  1: "February",
+  2: "March",
+  3: "April",
+  4: "May",
+  5: "June",
+  6: "July",
+  7: "August",
+  8: "September",
+  9: "October",
+  10: "November",
+  11: "December",
+};
 
 export const formatChart3Data = (
   data: ParsedRawData
@@ -138,6 +155,16 @@ export const chart3Options: Highcharts.Options = {
       animation: {
         duration: 1500,
       },
+    },
+  },
+  tooltip: {
+    useHTML: true,
+    formatter: function () {
+      return `<div class=${styles["tooltip"]}><span class=${styles["title"]}>${
+        MonthMap[this.point.x]
+      } ${
+        this.point.y
+      }</span><span>${this.point.value?.toLocaleString()} Births</span></div>`;
     },
   },
   series: [],

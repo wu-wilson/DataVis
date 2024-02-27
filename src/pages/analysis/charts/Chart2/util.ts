@@ -2,7 +2,7 @@ import { ParsedRawData } from "../../Analysis";
 import themes from "../../../../_themes.module.scss";
 import styles from "./Chart2.module.scss";
 
-type MapObj = {
+export type MapObj = {
   [key: number]: string;
 };
 
