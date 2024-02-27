@@ -3,6 +3,7 @@ $primary-color: #89a4c7;
 $card-bg: rgb(49, 49, 58);
 $page-bg: rgb(25, 25, 29);
 $chart-bg: rgb(60, 60, 66);
+$scrollbar: rgb(87, 87, 90);
 $font-family: Poppins;
 $font-color: white;
 
@@ -12,6 +13,7 @@ $font-color: white;
   card_bg: $card-bg;
   page_bg: $page-bg;
   chart_bg: $chart-bg;
+  scrollbar: $scrollbar;
   font_family: $font-family;
   font_color: $font-color;
 }

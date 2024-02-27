@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { parse } from "papaparse";
 import Loader from "../../components/loader/Loader";
 import Chart1 from "./charts/Chart1/Chart1";
+import Chart2 from "./charts/Chart2/Chart2";
 import styles from "./Analysis.module.scss";
 
 export type ParsedRawData = {
@@ -59,6 +60,7 @@ const Analysis = () => {
       {parsedData ? (
         <div className={styles["charts"]}>
           <Chart1 data={parsedData} />
+          <Chart2 data={parsedData} />
         </div>
       ) : null}
     </div>

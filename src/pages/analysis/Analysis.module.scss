@@ -6,11 +6,30 @@
 }
 
 .container {
+  max-height: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: themes.$scrollbar;
+    border-radius: 2rem;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: lighten(themes.$scrollbar, 10);
+  }
 }
 
 .charts {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
