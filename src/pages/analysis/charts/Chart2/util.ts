@@ -1,5 +1,4 @@
 import { ParsedRawData } from "../../Analysis";
-import { SeriesColumnOptions } from "highcharts";
 import themes from "../../../../_themes.module.scss";
 
 type MapObj = {
