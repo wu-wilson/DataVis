@@ -64,6 +64,7 @@ export const formatChart2Data = (data: ParsedRawData): ColumnSeries[] => {
 export const chart2Options: Highcharts.Options = {
   chart: {
     type: "column",
+    height: 600,
     zooming: {
       type: "xy",
     },

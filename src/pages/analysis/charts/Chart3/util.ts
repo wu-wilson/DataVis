@@ -33,6 +33,7 @@ export const formatChart3Data = (
 export const chart3Options: Highcharts.Options = {
   chart: {
     type: "heatmap",
+    height: 700,
     style: {
       fontFamily: themes.font_family,
     },
