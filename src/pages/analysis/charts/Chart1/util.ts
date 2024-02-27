@@ -90,5 +90,12 @@ export const chart1Options: Highcharts.Options = {
     },
     tickColor: themes.font_color,
   },
+  plotOptions: {
+    series: {
+      animation: {
+        duration: 1500,
+      },
+    },
+  },
   series: [],
 };

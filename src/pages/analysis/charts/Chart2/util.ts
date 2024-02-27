@@ -135,6 +135,9 @@ export const chart2Options: Highcharts.Options = {
   plotOptions: {
     series: {
       stacking: "normal",
+      animation: {
+        duration: 1500,
+      },
     },
     column: {
       borderWidth: 0,
