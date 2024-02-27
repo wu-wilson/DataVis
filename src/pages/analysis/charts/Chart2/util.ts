@@ -151,5 +151,15 @@ export const chart2Options: Highcharts.Options = {
     text: `<span class=${styles["subtitle"]}><span>Drag over an area to zoom</span></span>`,
     useHTML: true,
   },
+  tooltip: {
+    useHTML: true,
+    formatter: function () {
+      return `<div class=${styles["tooltip"]}><span class=${styles["title"]}>${
+        this.series.name
+      } ${
+        dayMap[this.point.x + 1]
+      }</span><span>${this.point.y?.toLocaleString()} Births</span></div>`;
+    },
+  },
   series: [],
 };
