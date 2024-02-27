@@ -1,6 +1,7 @@
 import { ParsedRawData } from "../../Analysis";
 import { SeriesLineOptions } from "highcharts";
 import themes from "../../../../_themes.module.scss";
+import styles from "./Chart1.module.scss";
 
 export const formatChart1Data = (data: ParsedRawData): SeriesLineOptions[] => {
   let formatted: SeriesLineOptions[] = [
@@ -49,6 +50,7 @@ export const chart1Options: Highcharts.Options = {
     style: {
       color: themes.font_color,
       fontWeight: "normal",
+      textDecoration: "underline",
     },
   },
   legend: {
@@ -96,6 +98,10 @@ export const chart1Options: Highcharts.Options = {
         duration: 1500,
       },
     },
+  },
+  subtitle: {
+    text: `<span class=${styles["subtitle"]}><span>Drag over an area to zoom</span><span>Hold shift and drag to pan</span></span>`,
+    useHTML: true,
   },
   series: [],
 };

@@ -24,3 +24,10 @@
     background-color: darken(themes.$primary-color, 10);
   }
 }
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  color: themes.$font-color;
+  font-style: italic;
+}

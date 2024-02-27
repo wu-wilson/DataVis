@@ -1,5 +1,6 @@
 import { ParsedRawData } from "../../Analysis";
 import themes from "../../../../_themes.module.scss";
+import styles from "./Chart2.module.scss";
 
 type MapObj = {
   [key: number]: string;
@@ -82,6 +83,7 @@ export const chart2Options: Highcharts.Options = {
     style: {
       color: themes.font_color,
       fontWeight: "normal",
+      textDecoration: "underline",
     },
   },
   legend: {
@@ -144,6 +146,10 @@ export const chart2Options: Highcharts.Options = {
       borderWidth: 0,
       borderRadius: 0,
     },
+  },
+  subtitle: {
+    text: `<span class=${styles["subtitle"]}><span>Drag over an area to zoom</span></span>`,
+    useHTML: true,
   },
   series: [],
 };

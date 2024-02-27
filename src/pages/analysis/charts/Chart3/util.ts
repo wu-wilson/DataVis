@@ -72,6 +72,7 @@ export const chart3Options: Highcharts.Options = {
     style: {
       color: themes.font_color,
       fontWeight: "normal",
+      textDecoration: "underline",
     },
   },
   legend: {
