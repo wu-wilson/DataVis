@@ -14,7 +14,7 @@ export type ParsedRawData = {
   births: string;
 }[];
 
-const isParsedRawData = (data: any): data is ParsedRawData => {
+export const isParsedRawData = (data: any): data is ParsedRawData => {
   if (Array.isArray(data)) {
     return (
       data[0].year &&

@@ -1,6 +1,122 @@
 @use "../../_themes.module.scss" as themes;
 
-.loader {
+.container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.landing {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 10px 20px;
+  border: none;
+  color: themes.$font-color;
+  background-color: themes.$primary-color;
+  font-family: themes.$font-family;
+  border-radius: 10px;
+  transition: ease-in background-color 200ms;
+  &:hover {
+    cursor: pointer;
+    background-color: darken(themes.$primary-color, 10);
+  }
+}
+
+.scale-container {
+  padding: 20px;
+  background-color: themes.$chart-bg;
+  .scale {
+    border-top: 2px solid themes.$font-color;
+    border-bottom: 2px solid themes.$font-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    .title {
+      margin-bottom: 1rem;
+    }
+    .subtext {
+      display: flex;
+      align-items: center;
+      white-space: pre-wrap;
+      .accent {
+        color: themes.$primary-color;
+      }
+      .pixel {
+        width: 1px;
+        height: 1px;
+        background-color: themes.$primary-color;
+      }
+    }
+  }
+}
+
+.visualization {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .info {
+    z-index: 100;
+    display: flex;
+    margin-top: 20px;
+    .vars-container {
+      padding: 20px;
+      background-color: themes.$chart-bg;
+      margin-right: 10px;
+      .vars {
+        min-width: 15rem;
+        border-top: 2px solid themes.$font-color;
+        border-bottom: 2px solid themes.$font-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        .title {
+          margin-bottom: 1rem;
+        }
+        .subtext {
+          .accent {
+            color: themes.$primary-color;
+          }
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+  .px {
+    height: 1px;
+    width: 1px;
+    background-color: themes.$primary-color;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+  }
+}
+.canvas {
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
