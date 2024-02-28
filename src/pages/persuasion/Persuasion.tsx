@@ -3,11 +3,14 @@ import { ParsedRawData, isParsedRawData } from "../analysis/Analysis";
 import { parse } from "papaparse";
 import Loader from "../../components/loader/Loader";
 import styles from "./Persuasion.module.scss";
+import { FaChild } from "react-icons/fa";
 
 type VisualizationDataRow = {
   diameter: number;
   date: string;
 };
+
+let intervalId: NodeJS.Timer | null = null;
 
 const Persuasion = () => {
   const [showVisualization, setShowVisualization] = useState<boolean>(false);
@@ -16,7 +19,7 @@ const Persuasion = () => {
     setShowVisualization(true);
   };
 
-  const [loading, setLoading] = useState<boolean | null>(false);
+  const [loading, setLoading] = useState<boolean | null>(null);
 
   useEffect(() => {
     if (showVisualization) {
@@ -50,7 +53,7 @@ const Persuasion = () => {
       for (let i = 0; i < data.length; i++) {
         if (i === 0) {
           formatted.push({
-            diameter: Math.floor(parseInt(data[i].births) / 1000),
+            diameter: Math.floor(parseInt(data[i].births) / 10000),
             date: new Date(
               parseInt(data[i].year),
               parseInt(data[i].month) - 1,
@@ -64,7 +67,7 @@ const Persuasion = () => {
         } else {
           formatted.push({
             diameter:
-              Math.floor(parseInt(data[i].births) / 1000) +
+              Math.floor(parseInt(data[i].births) / 10000) +
               formatted[i - 1].diameter,
             date: new Date(
               parseInt(data[i].year),
@@ -97,13 +100,27 @@ const Persuasion = () => {
   useEffect(() => {
     if (loading === false) {
       // create a interval and get the id
-      const myInterval = setInterval(() => {
+      intervalId = setInterval(() => {
         setAnimationIndex((prevIndex) => prevIndex + 1);
-      }, 50);
+      }, 1);
       // clear out the interval using it id when unmounting the component
-      return () => clearInterval(myInterval);
+      return () => {
+        if (intervalId) {
+          clearInterval(intervalId);
+        }
+      };
     }
   }, [loading]);
+
+  useEffect(() => {
+    if (
+      intervalId &&
+      formattedData &&
+      animationIndex === formattedData.length - 1
+    ) {
+      clearInterval(intervalId);
+    }
+  }, [animationIndex]);
 
   return (
     <div className={styles["container"]}>
@@ -145,12 +162,23 @@ const Persuasion = () => {
                       className={styles["accent"]}
                     >{`1 pixel in diameter → `}</span>
                     <div className={`${styles["pixel"]} ${styles["accent"]}`} />
-                    <span>{` = 1,000 births`}</span>
+                    <span>{` = 10,000 births`}</span>
                   </div>
-                  <div>That's enough people to fill commercial 2 planes!</div>
+                  <div>That's enough people to fill commercial 12 planes!</div>
                 </span>
               </div>
             </div>
+            <span className={styles["px-container"]}>
+              {formattedData ? (
+                <div
+                  className={styles["px"]}
+                  style={{
+                    minWidth: formattedData[animationIndex].diameter,
+                    minHeight: formattedData[animationIndex].diameter,
+                  }}
+                />
+              ) : null}
+            </span>
           </div>
         )
       ) : (
@@ -168,9 +196,9 @@ const Persuasion = () => {
                   className={styles["accent"]}
                 >{`1 pixel in radius → `}</span>
                 <div className={`${styles["pixel"]} ${styles["accent"]}`} />
-                <span>{` = 1,000 births`}</span>
+                <span>{` = 10,000 births`}</span>
               </div>
-              <div>That's enough people to fill 2 commercial planes!</div>
+              <div>That's enough people to fill 12 commercial planes!</div>
             </span>
           </div>
         </div>

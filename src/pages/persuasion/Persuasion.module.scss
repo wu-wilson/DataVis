@@ -105,13 +105,20 @@
       }
     }
   }
-  .px {
-    height: 1px;
-    width: 1px;
-    background-color: themes.$primary-color;
+  .px-container {
     position: absolute;
-    top: 50%;
-    right: 50%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .px {
+      background-color: themes.$primary-color;
+      border-radius: 50%;
+    }
   }
 }
 .canvas {
