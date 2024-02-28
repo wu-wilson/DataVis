@@ -1,9 +1,8 @@
-import { useState, useRef, useEffect } from "react";
-import { ParsedRawData, isParsedRawData } from "../analysis/Analysis";
+import { useState, useEffect } from "react";
+import { isParsedRawData } from "../analysis/Analysis";
 import { parse } from "papaparse";
 import Loader from "../../components/loader/Loader";
 import styles from "./Persuasion.module.scss";
-import { FaChild } from "react-icons/fa";
 
 type VisualizationDataRow = {
   diameter: number;
@@ -40,16 +39,7 @@ const Persuasion = () => {
     );
     const data = parse(csv, { header: true }).data;
     if (isParsedRawData(data)) {
-      let formatted: VisualizationDataRow[] = [
-        {
-          diameter: 0,
-          date: new Date(2000, 0, 1).toLocaleString("en-us", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }),
-        },
-      ];
+      let formatted: VisualizationDataRow[] = [];
       for (let i = 0; i < data.length; i++) {
         if (i === 0) {
           formatted.push({
