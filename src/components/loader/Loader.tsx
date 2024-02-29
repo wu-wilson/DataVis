@@ -5,7 +5,7 @@ import styles from "./Loader.module.scss";
 const Loader = ({ message }: { message?: string }) => {
   return (
     <div className={styles["container"]}>
-      <HashLoader color={themes["font_color"]} size={75} />
+      <HashLoader color={themes["font_color"]} size={75} loading={true} />
       <span className={styles["message"]}>
         {message ? message : "Loading..."}
       </span>
