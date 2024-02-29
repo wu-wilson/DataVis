@@ -75,6 +75,9 @@ const Persuasion = () => {
     <Loader message={"Getting things ready..."} />
   ) : (
     <div className={styles["container"]}>
+      <span className={styles["header"]}>
+        Should we be worried about the U.S. birth rate? Probably not.
+      </span>
       <div className={styles["cards"]}>
         <div className={styles["scale"]}>
           <div className={styles["content"]}>
