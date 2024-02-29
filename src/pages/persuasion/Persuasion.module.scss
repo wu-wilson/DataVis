@@ -135,11 +135,15 @@
   .cards {
     flex-direction: column;
     margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .controls,
   .variables,
   .scale {
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 20px;
     &:first-child {
       margin-right: 0;
