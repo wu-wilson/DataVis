@@ -103,7 +103,7 @@ const Persuasion = () => {
                 {frames && frames[frameIndex] ? frames[frameIndex].year : null}
               </span>
               <span className={styles["subtext"]}>
-                Number of carriages ={" "}
+                Number of symbols ={" "}
                 {frames && frames[frameIndex]
                   ? frames[frameIndex].numSymbols.toLocaleString()
                   : null}
