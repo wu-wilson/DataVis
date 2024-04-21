@@ -33,3 +33,22 @@
   display: flex;
   flex-direction: column;
 }
+
+.instructions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: center;
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+    color: darken(themes.$font-color, 20%);
+  }
+}

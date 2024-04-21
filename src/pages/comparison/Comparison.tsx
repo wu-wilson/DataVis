@@ -37,6 +37,13 @@ const Comparison = ({ year1, year2 }: { year1: number; year2: number }) => {
     </div>
   ) : (
     <div className={styles["container"]}>
+      <div className={styles["instructions"]}>
+        <span className={styles["title"]}>Want to Compare More?</span>
+        <span className={styles["subtitle"]}>
+          Place two different weights onto the physical prototype scale to
+          compare the years they correspond to.
+        </span>
+      </div>
       {parsedData ? (
         <div className={styles["charts"]}>
           <Chart4 data={parsedData} year1={year1} year2={year2} />

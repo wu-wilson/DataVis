@@ -21,6 +21,8 @@
 .tabs {
   width: 100%;
   display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
   &:first-child {
     border-top-left-radius: 20px;
   }
