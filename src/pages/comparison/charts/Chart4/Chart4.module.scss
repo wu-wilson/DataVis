@@ -1,0 +1,36 @@
+@use "../../../../_themes.module.scss" as themes;
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.zoom {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  border: none;
+  color: themes.$font-color;
+  background-color: themes.$primary-color;
+  font-family: themes.$font-family;
+  border-radius: 10px;
+  transition: ease-in background-color 200ms;
+  &:hover {
+    cursor: pointer;
+    background-color: darken(themes.$primary-color, 10);
+  }
+}
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-weight: bold;
+    color: themes.$primary-color;
+    width: 100%;
+    text-decoration: underline;
+  }
+}
