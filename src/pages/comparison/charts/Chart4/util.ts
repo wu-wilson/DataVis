@@ -62,7 +62,7 @@ const getTooltipTitle = (series: string, x: number) => {
 export const chart4Options: Highcharts.Options = {
   chart: {
     type: "line",
-    height: 400,
+    height: 375,
     zooming: {
       type: "x",
     },

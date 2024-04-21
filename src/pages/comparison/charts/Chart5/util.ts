@@ -60,7 +60,7 @@ export const formatChart5Data = (
 export const chart5Options: Highcharts.Options = {
   chart: {
     type: "column",
-    height: 450,
+    height: 425,
     zooming: {
       type: "xy",
     },
