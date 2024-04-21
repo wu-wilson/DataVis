@@ -12,6 +12,11 @@ type Tab = {
 
 const tabs: Tab[] = [
   {
+    name: "Comparison",
+    icon: <BsBarChartFill className={styles["tab-icon"]} size={15} />,
+    component: <Analysis />,
+  },
+  {
     name: "Analysis",
     icon: <BsBarChartFill className={styles["tab-icon"]} size={15} />,
     component: <Analysis />,

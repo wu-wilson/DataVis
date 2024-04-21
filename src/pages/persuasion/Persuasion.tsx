@@ -37,7 +37,7 @@ const Persuasion = () => {
         const year = parseInt(data[i].year);
         const births = parseInt(data[i].births);
         for (let j = 0; j < frames.length; j++) {
-          if (year <= frames[j].year) {
+          if (year === frames[j].year) {
             frames[j].numSymbols += births;
           }
         }
@@ -76,7 +76,7 @@ const Persuasion = () => {
   ) : (
     <div className={styles["container"]}>
       <span className={styles["header"]}>
-        Should we be worried about the U.S. birth rate? Probably not.
+        Should we be worried about the U.S. birth rate? Probably.
       </span>
       <div className={styles["cards"]}>
         <div className={styles["scale"]}>
