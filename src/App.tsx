@@ -7,18 +7,17 @@ const App = () => {
   return (
     <div className={styles["container"]}>
       <Particles num={40} radius={6} color={themes["primary_color"]} />
-      <div className={styles["credits"]}>
-        Hi! This website was coded by Wilson Wu. Feel free to check out the code
+      <span className={styles["credits"]}>
+        This website was coded by Wilson Wu. Feel free to check out the code
         <a
           className={styles["link"]}
           href="https://github.com/wu-wilson/DataVis"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {" "}
-          here!
+          {" here!"}
         </a>
-      </div>
+      </span>
       <Card />
     </div>
   );
