@@ -34,3 +34,10 @@
     text-decoration: underline;
   }
 }
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  color: themes.$font-color;
+  font-style: italic;
+}
