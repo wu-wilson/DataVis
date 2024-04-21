@@ -10,7 +10,7 @@ export const formatChart4Data = (
 ): SeriesLineOptions[] => {
   let formatted: SeriesLineOptions[] = [
     { type: "line", color: themes.primary_color, name: "2000", data: [] },
-    { type: "line", color: "green", name: "2014", data: [] },
+    { type: "line", color: "#7cc7a2", name: "2014", data: [] },
   ];
   // Map each month of the chosen years to its number of births
   let counts: { [key: string]: number } = {};
@@ -62,6 +62,7 @@ const getTooltipTitle = (series: string, x: number) => {
 export const chart4Options: Highcharts.Options = {
   chart: {
     type: "line",
+    height: 400,
     zooming: {
       type: "x",
     },
