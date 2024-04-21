@@ -1,5 +1,7 @@
 import { ReactElement, useState } from "react";
 import { BsBarChartFill, BsBookHalf } from "react-icons/bs";
+import { FaCodeCompare } from "react-icons/fa6";
+import Comparison from "../../pages/comparison/Comparison";
 import Analysis from "../../pages/analysis/Analysis";
 import Persuasion from "../../pages/persuasion/Persuasion";
 import styles from "./Card.module.scss";
@@ -13,8 +15,8 @@ type Tab = {
 const tabs: Tab[] = [
   {
     name: "Comparison",
-    icon: <BsBarChartFill className={styles["tab-icon"]} size={15} />,
-    component: <Analysis />,
+    icon: <FaCodeCompare className={styles["tab-icon"]} size={15} />,
+    component: <Comparison year1={2000} year2={2014} />,
   },
   {
     name: "Analysis",

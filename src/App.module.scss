@@ -5,4 +5,17 @@
   height: 100vh;
   font-family: themes.$font-family;
   color: themes.$font-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.credits {
+  margin-bottom: 1rem;
+  white-space: pre;
+  .link {
+    font-weight: bold;
+    color: themes.$primary-color;
+  }
 }
