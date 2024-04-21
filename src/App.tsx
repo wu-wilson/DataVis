@@ -8,13 +8,14 @@ const App = () => {
     <div className={styles["container"]}>
       <Particles num={40} radius={6} color={themes["primary_color"]} />
       <div className={styles["credits"]}>
-        Hi! This website was coded by Wilson Wu. Feel free to check out the code{" "}
+        Hi! This website was coded by Wilson Wu. Feel free to check out the code
         <a
           className={styles["link"]}
           href="https://github.com/wu-wilson/DataVis"
           target="_blank"
           rel="noopener noreferrer"
         >
+          {" "}
           here!
         </a>
       </div>

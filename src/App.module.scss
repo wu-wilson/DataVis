@@ -13,13 +13,16 @@
 
 .credits {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   margin-bottom: 1rem;
-  white-space: pre;
   font-size: 0.85rem;
   .link {
     font-weight: bold;
     color: themes.$primary-color;
+    white-space: pre;
+    text-decoration: none;
   }
 }
