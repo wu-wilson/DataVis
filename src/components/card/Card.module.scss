@@ -15,12 +15,13 @@
   border-radius: 20px;
   box-sizing: border-box;
   background-color: darken(themes.$card-bg, 5);
+  overflow: hidden;
 }
 
 .tabs {
   width: 100%;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   scrollbar-width: none;
   &:first-child {
     border-top-left-radius: 20px;
